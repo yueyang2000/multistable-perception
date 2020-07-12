@@ -16,9 +16,9 @@ phi=2*pi*rand(1,N)-pi;
 x=r0.*cos(phi);
 for m=1:N
     if m<N*K/(K+1)
-        p(m)=plot(x(m),y(m), 'color' , 'r' , 'marker' , '.' , 'markersize' ,15); %中间的r是红色，后面的size改变点的大小
+        p(m)=plot(x(m),y(m), 'color' , 'w' , 'marker' , '.' , 'markersize' ,15); %中间的r是红色，后面的size改变点的大小
     else
-        p(m)=plot(x(m),y(m), 'color' , 'g' , 'marker' , '.' , 'markersize' ,15); %中间的g是绿色，后面的size改变点的大小
+        p(m)=plot(x(m),y(m), 'color' , 'w' , 'marker' , '.' , 'markersize' ,15); %中间的g是绿色，后面的size改变点的大小
     end
 end
 

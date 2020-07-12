@@ -21,7 +21,7 @@ os.chdir(_thisDir)
 
 # info dialog
 expName = 'MP' 
-expInfo = {'participant': '', 'session': ''}
+expInfo = {'participant': '', 'gender': '', 'age': '', 'ID': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -54,7 +54,7 @@ else:
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
 
-# open a csv file
+# open a csv file, note that directory data/ must exist
 headers = ['id','type','name','rt','duration']
 f = open(filename+'.csv','w')
 f_csv = csv.writer(f)
@@ -424,7 +424,7 @@ def run_trial(type, id):
     elif type == 'RS2':
         show_text('RS2 instruction', time=1.0)
         show_text('prepare', time=1.0)
-        show_RS(RS2, time=30.0,id=id)   
+        show_RS(RS2, time=30.0,id=id)
     elif type == 'QD':
         show_text('QD instruction', time=1.0)
         show_text('prepare', time=1.0)
@@ -433,10 +433,14 @@ def run_trial(type, id):
     show_text('rest', time = 25.0) # rest for 25s
 
 
-# example: a single block
+
+# ====== experiment starts here ======
+
+# example: three stimuli
 show_text('Multistable Perception', time=3.0)
-for i in range(9):
-    run_trial('QD', id=i)
+run_trial('RS1', id=1)
+run_trial('RS2', id=2)
+run_trail('QD', id=3)
 
 
 # after experiment
