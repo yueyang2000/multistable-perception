@@ -1,0 +1,2 @@
+flag = 0: shun, shang, aa
+flag = 1: ni, xia, bb
