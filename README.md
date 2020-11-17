@@ -1,6 +1,6 @@
 # multistable-perception
 
-<img src="/Users/yueyang/yiqunyang/SRT_MP/multistable-perception/codes/revolving_sphere.gif" alt="revolving_sphere" style="zoom:50%;" />
+<img src="codes/revolving_sphere.gif" alt="revolving_sphere" style="zoom:50%;" />
 
 Codes of a simple psychology experiment, written in PsycoPy3.
 
